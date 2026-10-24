@@ -109,31 +109,6 @@
 - **Steiger 검정 근사**: 이진 형질도 연속형으로 가정해 상관을 근사 계산했으므로 방향성 결과는 참고용입니다.
 - **다중 비교**: 주요 질문 5개 기준 Bonferroni 기준(p < 0.01)을 적용해도 흡연(p=0.001), BMI(p=0.008)는 유의하지만, 이 기준은 보수적인 참고치입니다.
 
-## 8. 다음 단계
-
-- [ ] MR-PRESSO로 이상치 변이를 찾아 제거한 뒤 재분석
-- [ ] 흡연량(cigarettes per day), 평생 흡연 지수 GWAS로 재분석
-- [ ] BMI와 흡연을 함께 넣은 다변량 MR(MVMR)
-- [ ] CRP → 류마티스관절염 MR로 파트 A의 CRP 연관성이 원인인지 결과인지 확인
-- [ ] BioBank Japan 등 동아시아 GWAS로 재현
-
-## 9. 실행 방법
-
-```text
-.
-├── partB_two_sample_mr.ipynb   # R 노트북
-├── mr_summary.csv              # 전체 결과 표
-├── mr_scatter_smk_ra.png       # 흡연 → RA 산점도
-├── mr_forest_smk_ra.png        # 변이별 효과 숲그림
-└── README.md
-```
-
-1. [IEU OpenGWAS](https://api.opengwas.io)에 가입해 API 토큰(JWT)을 발급받습니다.
-2. Google Colab에서 런타임 유형을 **R**로 바꾸고 노트북을 엽니다.
-3. 토큰 셀에 발급받은 토큰을 붙여 넣고 위에서부터 순서대로 실행합니다.
-4. 그림 셀의 `target`을 바꾸면(예: `"ra_ad_noHLA"`) 다른 분석의 그림을 그릴 수 있습니다.
-
-> ⚠️ **토큰은 저장소에 올리지 마세요.** 커밋 전에 토큰 셀을 `""`로 비우고 "모든 출력 지우기"를 실행하세요.
 
 ## 참고 문헌
 
